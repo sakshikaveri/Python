@@ -86,19 +86,31 @@
 #     else:
 #         print("The number is a prime number")
 
-class Solution(object):
-    def isValid(self, s):
-        output=''
-        for i in range(len(s)):
-            # print(s[i])
-            if '(' or ')' or '{' or '}' or '[' or ']' in s:
-                output+=s[i]
-                break
-            if s[i] in output:
-                output+=s[i]
-                return 'true'
-            else:
-                return 'false'
-  
-obj1=Solution()
-print(obj1.isValid('(]'))
+'''Swapping variable with using any third variable'''
+# 1) using basic logic
+a=6
+b=5
+print('Before conversion:')
+print(a)
+print(b)
+
+# a=a+b  # a= 6+5=11
+# b=a-b  # b= 11-5=6
+# a=a-b  # a= 11-6=5
+# print('After conversion:')
+# print(a)
+# print(b)
+
+# 2) using XOR
+# a=a^b
+# b=a^b
+# a=a^b
+# print('After conversion:')
+# print(a)
+# print(b)
+# 3) using rot two concept (stack)
+a,b=b,a
+print('After conversion:')
+print(a)
+print(b)
+
