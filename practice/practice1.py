@@ -78,10 +78,27 @@
 #     print("The sequence is not a palindrome")  
 
 # Prime number
-num=34
-for i in range(2,num):
-    if num%i==0:
-        print("The number is not a prime number")
-        break
-    else:
-        print("The number is a prime number")
+# num=34
+# for i in range(2,num):
+#     if num%i==0:
+#         print("The number is not a prime number")
+#         break
+#     else:
+#         print("The number is a prime number")
+
+class Solution(object):
+    def isValid(self, s):
+        output=''
+        for i in range(len(s)):
+            # print(s[i])
+            if '(' or ')' or '{' or '}' or '[' or ']' in s:
+                output+=s[i]
+                break
+            if s[i] in output:
+                output+=s[i]
+                return 'true'
+            else:
+                return 'false'
+  
+obj1=Solution()
+print(obj1.isValid('(]'))
