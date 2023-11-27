@@ -87,12 +87,12 @@
 #         print("The number is a prime number")
 
 '''Swapping variable with using any third variable'''
-# 1) using basic logic
-a=6
-b=5
-print('Before conversion:')
-print(a)
-print(b)
+# # 1) using basic logic
+# a=6
+# b=5
+# print('Before conversion:')
+# print(a)
+# print(b)
 
 # a=a+b  # a= 6+5=11
 # b=a-b  # b= 11-5=6
@@ -109,8 +109,47 @@ print(b)
 # print(a)
 # print(b)
 # 3) using rot two concept (stack)
-a,b=b,a
-print('After conversion:')
-print(a)
-print(b)
+# a,b=b,a
+# print('After conversion:')
+# print(a)
+# print(b)
 
+'''Printing patterns'''
+'''
+# # # # 
+# # # # 
+# # # # 
+# # # # 
+'''
+# print("# "*4)
+# print("# "*4)
+# print("# "*4)
+# print("# "*4)
+
+# OR
+# for i in range(4):
+#     for j in range(4):
+#         print('# ',end='')
+#     print()
+
+'''
+# 
+# # 
+# # # 
+# # # # 
+'''
+# for i in range(1,5):
+#     for j in range(i):
+#         print('# ',end='')
+#     print()
+
+'''
+# # # # 
+# # #
+# #
+#
+'''
+for i in range(4):
+    for j in range(4-i):
+        print('# ',end='')
+    print()
